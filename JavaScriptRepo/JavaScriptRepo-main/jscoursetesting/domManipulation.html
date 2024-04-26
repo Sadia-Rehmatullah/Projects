@@ -1,0 +1,82 @@
+<!-- <!DOCTYPE html>
+<html >
+<head>
+    <title>querySelectorAll Example</title>
+</head>
+<body>
+    !-- <div id="myDiv" class="example">
+     !--This is a comment   
+    
+    <a href="www.example.com">Click me</a>
+    <script>var documentNode = document; console.log(documentNode);</script> -->
+    <!-- <p class="highlighted">This is a highlighted paragraph.</p>
+    <p class="highlighted">This is another highlighted paragraph.</p>
+    <p>This is a regular paragraph.</p> --
+    
+    <p id="my-paragraph">This is a paragraph with an ID.</p>
+    <p>This is another paragraph.</p>
+
+
+    <script src="./domManipulation.js"></script>
+    !-- </div> --
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>classList Example</title>
+    <style>
+        .highlight {
+            color: red;
+            font-weight: bold;
+        }
+        .italic {
+            font-style: italic;
+        }
+        .underline {
+            text-decoration: underline;
+        }
+        .strike {
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+ 
+    <p id="myParagraph" class="highlight">This is a paragraph.</p>
+    <button onclick="performClassListOperations()">Perform Operations</button>
+ 
+    <script>
+        function performClassListOperations() {
+            const paragraph = document.getElementById('myParagraph');
+ 
+            // Adding a class
+            paragraph.classList.add('italic');
+            
+ 
+            // Removing a class
+            paragraph.classList.remove('highlight');
+ 
+            // Toggling a class
+            paragraph.classList.toggle('underline', true);
+ 
+            // Checking if a class exists
+            const hasItalicClass = paragraph.classList.contains('italic');
+            console.log(`Has italic class: ${hasItalicClass}`);
+ 
+            // Replacing a class after a delay (for demonstration)
+            setTimeout(() => {
+                paragraph.classList.replace('underline', 'strike');
+                
+                // Accessing classes as a string
+                const classString = paragraph.classList.toString();
+                console.log(`Current classes: ${classString}`);
+            }, 2000); // Delay for 2 seconds
+        }
+    </script>
+ 
+</body>
+</html>
